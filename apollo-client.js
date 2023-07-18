@@ -1,27 +1,33 @@
-export async function getStaticProps() {
+export async function getStaticProps({ params }) {
     const client = new ApolloClient({
        uri: 'https://api-us-east-1-shared-usea1-02.hygraph.com/v2/clk3ivcdl0l4q01ur07r0hqxx/master',
        cache: new InMemoryCache(),
     });
     const data = await client.query({
        query: gql`
-          query ProductsQuery {
-             products {
+          query MyQuery($slug: String) {
+             product(where: { slug: $slug} ) {
                 id
                 name
                 slug
-                price
+                description {
+                    html
+                }
                 image {
                    url
                 }
              }
           }
        `,
+       variables: {
+        slug: params.productslug,
+       },
     });
-    const allProducts = data.data.products;
+
+    const product = data.data.product;
     return {
        props: {
-          allProducts,
+          product,
        },
     };
    }

@@ -2,7 +2,7 @@ import Link from 'next/link';
 import styles from '../styles/components/Header.module.css';
 const Header = () => {
     return(
-        <nav className={styles.navbar}>
+        <nav className="navbar container">
             <Link href="/">
                 <a>
                     <div className={styles.logo}>
@@ -12,9 +12,9 @@ const Header = () => {
                     </div>
                 </a>
             </Link>
-            <div className={styles.nav_price}>
+            <div className="nav-price snipcart-checkout">
                 <span>🛒</span>
-                <p>$0.00</p>
+                <p className="snipcart-total-price">$0.00</p>
             </div>
         </nav>
     );
