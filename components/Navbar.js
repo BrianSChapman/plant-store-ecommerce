@@ -1,8 +1,8 @@
 import Link from 'next/link';
-import styles from '../styles/components/Header.module.css';
-const Header = () => {
+import styles from '../styles/components/Navbar.module.css';
+const Navbar = () => {
     return(
-        <nav className="navbar container">
+        <nav className={styles.navbar}>
             <Link href="/">
                 <a>
                     <div className={styles.logo}>
@@ -20,4 +20,4 @@ const Header = () => {
     );
   };
 
-export default Header;
+export default Navbar;
