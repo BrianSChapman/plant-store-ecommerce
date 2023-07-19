@@ -7,7 +7,7 @@ export default function Home({ allProducts }) {
   return (
     <>
       <Head>
-        <title>Plants | Home</title>
+        <title>Horticurious | Home</title>
       </Head>
       <div className="container">
         <h2 className={styles.title}>
