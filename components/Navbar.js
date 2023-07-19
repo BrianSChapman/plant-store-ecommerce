@@ -4,13 +4,11 @@ const Navbar = () => {
     return(
         <nav className={styles.navbar}>
             <Link href="/">
-                <a>
                     <div className={styles.logo}>
                         <p>
-                            PLANTS <span className={styles.logo_span}>☘</span>
+                            HORTICURIOUS
                         </p>
                     </div>
-                </a>
             </Link>
             <div className="nav-price snipcart-checkout">
                 <span>🛒</span>

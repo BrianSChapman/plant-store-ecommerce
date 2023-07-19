@@ -11,18 +11,16 @@ export default function Home({ allProducts }) {
       </Head>
       <div className="container">
         <h2 className={styles.title}>
-          All Products <span>🌿</span>
+          All Products <span></span>
         </h2>
         <div className={styles.products_container}>
           {allProducts.map((product) => {
             return (
               <div className={styles.product_card} key={product.id}>
                 <Link href={`products/${product.slug}`}>
-                  <a>
                     <div className={styles.product_img}>
                       <img src={product.image.url} alt={product.name} />
                     </div>
-                  </a>
                 </Link>
                 <div className={styles.product_content}>
                   <h3>{product.name}</h3>
@@ -35,7 +33,7 @@ export default function Home({ allProducts }) {
                     data-item-image={product.image.url}
                     data-item-name={product.name}
                   >
-                    Add to cart 🛒
+                    Add to cart 
                   </button>
                 </div>
               </div>
@@ -54,8 +52,8 @@ export async function getStaticProps() {
   });
 
   const data = await client.query({
-    query: gql`
-            query: ProductsQuery {
+    query: gql` 
+            query ProductsQuery {
               products {
                 id
                 name
