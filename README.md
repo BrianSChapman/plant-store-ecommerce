@@ -13,4 +13,4 @@ This is only a mock-up e-commerce application, so real services cannot be render
 
 ## License
 
-This application has been created under the MIT license. Please learn on [here](https://github.com/git/git-scm.com/blob/main/MIT-LICENSE.txt)
+This application has been created under the MIT license. Please learn more [here](https://github.com/git/git-scm.com/blob/main/MIT-LICENSE.txt)
